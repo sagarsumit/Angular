@@ -1,0 +1,17 @@
+<div *ngFor="let noticeItem of noticeList">
+		<table style="margin-left:-25px; margin-top:-12px" width="720" >
+			<tr>
+				<td align="left" width="97%">
+					<ul class="list"> 
+						<li class="list-question">{{noticeItem.title}}</li>
+						<li>{{noticeItem.description}}</li>
+						<li>{{noticeItem.date}}</li>
+					</ul>
+				</td>
+				<td left="right" style="vertical-align:text-top;" width="3%">
+					<button (click)="editNotice(noticeItem)">Edit</button>
+				</td>
+			</tr>
+		</table>
+		<hr style="margin-top: -3px;"/>
+    </div>

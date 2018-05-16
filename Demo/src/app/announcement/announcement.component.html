@@ -1,0 +1,60 @@
+<div class="row">
+	<div>
+		<h2 class="component-heading">Create/Edit Announcement</h2>
+	</div>
+	<br><br><br>
+	<div>
+		<table width="700">
+			<tr class="spaceunder">
+				<td class="announcement-form-label" >Title:*</td>
+				<td align="right">
+					<input type="text" #title style="width: 500px;" [(ngModel)]="titleInput">
+				</td>
+			</tr>
+			<br>
+			<tr class="spaceunder">
+				<td class="announcement-form-label">Details:*</td>
+				<td align="right">
+					<textarea rows="4"  #description cols="50" style="width: 500px; height:100px;" placeholder="Details" [(ngModel)]="textareaField"></textarea>
+				</td>
+			</tr>
+			<br>
+			<tr class="spaceunder">
+				<td class="announcement-form-label">End Date: </td>
+				<td align="right">
+					<input type="text" #date style="width: 500px;" [(ngModel)]="endDateInput">
+				</td>
+			</tr>
+			<br>
+			<tr>
+				<td></td>
+				<td align="right">
+					<button (click)="saveAnnouncement(title.value, description.value, date.value)">Save</button>
+					<button (click)="resetAnnouncement()" [hidden]="hideClear">Clear</button>
+					<button (click)="deleteAnnouncement()" [hidden]="hideDelete">Delete</button>
+				</td>    
+			</tr>
+		</table>
+	</div>
+	
+	<br><p class="component-heading">Announcements</p><br><br>
+	
+    <div *ngFor="let announcementItem of announcementList">
+		<table style="margin-left:-25px; margin-top:-12px" width="720" >
+			<tr>
+				<td align="left" width="97%">
+					<ul class="list"> 
+						<li class="list-question">{{announcementItem.title}}</li>
+						<li>{{announcementItem.description}}</li>
+						<li>{{announcementItem.date}}</li>
+					</ul>
+				</td>
+				<td left="right" style="vertical-align:text-top;" width="3%">
+					<button (click)="editAnnouncement(announcementItem)">Edit</button>
+				</td>
+			</tr>
+		</table>
+		<hr style="margin-top: -3px;"/>
+    </div>
+	
+</div>
