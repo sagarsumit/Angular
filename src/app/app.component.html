@@ -1,0 +1,48 @@
+<div id="header">
+  <div class="main-page">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="header-text-color">
+            <span id="header-logo-name">RUBRIC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+<div class="main-page">
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+
+      <div class="main-page">
+        <div class="explore-box">
+          <div class="explore-header">
+            <input type="search" class="form-control" id="search-box" placeholder="Search people..."/>
+          </div>
+          <div class="explore-body">
+            <div>Twubric Score</div>
+            <div>Friends</div>
+            <div>Influence</div>
+            <div>Chirpiness</div>
+            <div>By Date</div>
+          </div>
+          <div class="explore-footer">
+            <div>Sort by filters</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+        <div *ngFor="let person of people" class="user-box" (mouseenter)="showPersonInfo()" (mouseleave)="hidePersonInfo()">
+            <img src="{{person.image}}" class="user-image" />
+            <div class="user-details">
+              <div class="user-fullname">{{person.fullname}}</div>
+              <div class="user-name">@{{person.username}}</div>
+              <div class="user-joined">{{person.joined_date}}</div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

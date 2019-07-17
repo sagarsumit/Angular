@@ -1,0 +1,85 @@
+.main-page{
+    margin: 0 10%;
+}
+#header{
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #1948df;
+    padding: 20px 0px;
+}
+.header-text-color{
+    color: #ffffff;
+}
+#header-logo-name{
+    font-size: 150%;
+}
+.explore-box{
+    width: 100%;
+    background-color: #ededed;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #bbbbbb;
+}
+.explore-header{
+    background-color: #9a9a9a;
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+#search-box{
+    border: none;
+    border-bottom: 1px solid #1948df;
+}
+.explore-body{
+    padding: 0px 15px;
+    background-color: #f9ebeb;
+}
+.explore-body > div{
+    cursor: pointer;
+    padding: 15px 0px;
+    border-bottom: 0.05px solid #cecece;
+}
+.explore-body > div:last-child{
+    border-bottom: none;
+}
+.explore-footer{
+    padding: 5px 0px;
+    border-top: 0.05px solid #000000;
+    background-color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+}
+.explore-footer > div{
+    text-align: center;
+}
+
+.user-box{
+    float: left;
+    margin: 0px 20px 20px 20px;
+    width: 250px;
+    height: 350px;
+    background: #000000;
+    box-shadow: 0px 0px 10px #bbbbbb;
+}
+.user-image{
+    width: 250px;
+    height: 250px;
+}
+.user-details{
+    width: 250px;
+    height: 100px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    color: #960000;
+}
+.user-fullname{
+    font-weight: bold;
+    font-size: 150%;
+}
+.user-name{
+    font-style: italic;
+}
+.user-joined{
+    color: #000000;
+    font-size: 120%;
+}
